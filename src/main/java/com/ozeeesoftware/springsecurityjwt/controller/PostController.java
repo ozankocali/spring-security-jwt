@@ -22,25 +22,25 @@ public class PostController {
     }
 
     @GetMapping("/approve/{postId}")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MODERATOR')")
+    @PreAuthorize("hasAnyAuthority('post:approve')")
     public String approvePost(@PathVariable int postId){
         return postService.approvePost(postId);
     }
 
     @GetMapping("/approveAll")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MODERATOR')")
+    @PreAuthorize("hasAnyAuthority('post:approve')")
     public String approveAll(){
         return postService.approveAll();
     }
 
     @GetMapping("/reject")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MODERATOR')")
+    @PreAuthorize("hasAnyAuthority('post:approve')")
     public String rejectPost(long postId){
         return postService.rejectPost(postId);
     }
 
     @GetMapping("/rejectAll")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MODERATOR')")
+    @PreAuthorize("hasAnyAuthority('post:approve')")
     public String rejectAll(){
         return postService.rejectAll();
     }
