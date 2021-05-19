@@ -1,7 +1,7 @@
 package com.ozeeesoftware.springsecurityjwt.service;
 
 import com.ozeeesoftware.springsecurityjwt.model.Post;
-import com.ozeeesoftware.springsecurityjwt.model.PostStatus;
+import com.ozeeesoftware.springsecurityjwt.constant.PostStatus;
 import com.ozeeesoftware.springsecurityjwt.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
