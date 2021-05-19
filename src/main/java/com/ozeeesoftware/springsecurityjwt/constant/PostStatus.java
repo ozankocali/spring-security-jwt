@@ -1,4 +1,4 @@
-package com.ozeeesoftware.springsecurityjwt.model;
+package com.ozeeesoftware.springsecurityjwt.constant;
 
 public enum PostStatus {
     PENDING,APPROVED,REJECTED;
