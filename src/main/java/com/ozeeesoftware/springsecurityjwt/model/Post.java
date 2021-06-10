@@ -18,13 +18,14 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long postId;
+    private Long postId;
     private String subject;
     private String description;
     private String postUserName;
 
     @Enumerated(EnumType.STRING)
     private PostStatus postStatus;
+
 
 
 }
